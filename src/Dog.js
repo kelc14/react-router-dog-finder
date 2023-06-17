@@ -8,15 +8,20 @@ const Dog = () => {
   const { dogName } = useParams();
   const [dogNameState, setDogNameState] = useState(dogName);
 
-  //   const [dog, setDog] = useState(() => dogs.find((dog) => dog.src === dogName));
+  const [dog, setDog] = useState(() =>
+    dogs.find((dog) => dog.src === dogNameState)
+  );
 
-  let dogData = dogs.find((d) => d.src === dogNameState);
+  // let dogData = dogs.find((d) => d.src === dogNameState);
 
   useEffect(() => {
-    dogData = dogs.find((d) => d.src === dogNameState);
-  }, [dogNameState]);
+    const getNewDogInfo = (nameOfDog) => {
+      setDog(() => dogs.find((d) => d.src === nameOfDog));
+    };
+    getNewDogInfo(dogName);
+  }, [dogName]);
 
-  const { name, age, src, facts } = dogData;
+  const { name, age, src, facts } = dog;
 
   return (
     <>
