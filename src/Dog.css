@@ -1,0 +1,8 @@
+.Dog-img {
+  max-height: 200px;
+}
+
+.Dog-list {
+  list-style: none;
+  text-align: left;
+}

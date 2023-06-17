@@ -1,0 +1,21 @@
+.Nav-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #cfd8dc;
+}
+.Nav-navbar li {
+  list-style: none;
+}
+
+.Nav-navbar a {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+}
+
+.Nav-navbar a:hover {
+  color: white;
+}
